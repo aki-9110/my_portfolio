@@ -1,0 +1,38 @@
+<div class="mt-7 flex justify-center">
+  <div class="w-full max-w-md">
+    <h2 class="text-5xl text-dullGold font-header text-center">新規登録</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field mx-auto mt-7">
+        <%= f.label :name, class: "text-dullGold" %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "bg-lightGray w-md px-3 py-2 mt-1 rounded-lg" %>
+      </div>
+
+      <div class="field mx-auto mt-7">
+        <%= f.label :email, class: "text-dullGold" %><br />
+        <%= f.email_field :email, autocomplete: "email", class: "bg-lightGray w-md px-3 py-2 mt-1 rounded-lg" %>
+      </div>
+
+      <div class="field mx-auto mt-7">
+        <%= f.label :password, class: "text-dullGold" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "bg-lightGray w-md px-3 py-2 mt-1 rounded-lg" %>
+      </div>
+
+      <div class="field mx-auto mt-7">
+        <%= f.label :password_confirmation, class: "text-dullGold" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "bg-lightGray w-md px-3 py-2 mt-1 rounded-lg" %>
+      </div>
+
+      <div class="actions text-center mt-7 btn bg-goldBeige">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

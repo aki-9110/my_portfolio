@@ -5,6 +5,9 @@
     <% end %>
   </div>
   <div class="flex items-center justify-end">
+    <% if user_signed_in? %>
+      <h1>ログイン中</h1>
+    <% end %>
     <div class="mr-5 hover:opacity-70">
       <%= link_to t('.top'), root_path %>
     </div>
@@ -15,7 +18,7 @@
       <%= link_to t('.inquiry'), '#' %>
     </div>
     <div class="mr-5 hover:opacity-70">
-      <%= link_to t('.sign_up'), '#' %>
+      <%= link_to t('.sign_up'), new_user_registration_path %>
     </div>
     <div class="mr-5 hover:opacity-70">
       <%= link_to t('.log_in'), '#' %>
