@@ -1,11 +1,17 @@
 ja:
   shared:
-    header:
-      log_in: 'ログイン'
+    before_signin_header:
+      sign_in: 'ログイン'
       sign_up: '新規登録'
       inquiry: '問い合わせ'
       review_index: '投稿一覧'
       top: 'ホーム'
+    header:
+      review_index: '投稿一覧'
+      post_review: 'レビューを書く'
+      ranking: 'ランキング'
+      top: 'ホーム'
+      sign_out: 'ログアウト'
     footer:
       inquiry: '問い合わせ'
       privacy: プライバシーポリシー
